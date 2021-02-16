@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import albumsReducer from './albumsReducer';
 
-const reducers = combineReducers({
-    albums: albumsReducer
+export const reducers = combineReducers({
+    albumsState: albumsReducer
 });
 
-export default reducers;
+export type RootState = ReturnType<typeof reducers>;

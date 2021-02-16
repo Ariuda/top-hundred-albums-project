@@ -1,0 +1,21 @@
+.card-container {
+    padding: 15px;
+    .card {
+        background-color: $transparent-white;
+        border: none;
+        border-radius: 5px;
+        height: 100%;
+        .card-text {
+            padding: 15px;
+            p {
+                color: $white;
+            }
+            .album-title {
+                font-size: $lg-size;
+            }
+            .artist-name {
+                font-size: $md-size;
+            }
+        }
+    }
+}

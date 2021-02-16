@@ -9,7 +9,7 @@ import AlbumsList from './pages/AlbumsList';
 const App: React.FC = () => {
   return (
     <Provider store={store}>
-      <div>
+      <div className="container">
         <Router history={history}>
           <Switch>
             <Route path="/" exact component={AlbumsList} />
