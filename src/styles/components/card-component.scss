@@ -1,20 +1,31 @@
 .card-container {
-    padding: 15px;
+    padding: 5px;
     .card {
         background-color: $transparent-white;
         border: none;
         border-radius: 5px;
         height: 100%;
-        .card-text {
-            padding: 15px;
-            p {
-                color: $white;
+        padding: 15px;
+        .card-first-row {
+            display: flex;
+            margin-bottom: 15px;
+            min-height: 164px;
+            img {
+                max-width: 120px;
+                max-height: 120px;
+                border-radius: 50%;
             }
-            .album-title {
-                font-size: $lg-size;
-            }
-            .artist-name {
-                font-size: $md-size;
+            .card-text {
+                p {
+                    color: $white;
+                    margin-left: 15px;
+                }
+                .album-title {
+                    font-size: $lg-size;
+                }
+                .artist-name {
+                    font-size: $md-size;
+                }
             }
         }
     }

@@ -6,5 +6,10 @@ interface FetchAlbumsAction {
     payload: any
 }
 
+interface UpdatePageAction {
+    type: ActionTypes.UPDATE_PAGE,
+    payload: number;
+}
 
-export type Action = FetchAlbumsAction;
+
+export type Action = FetchAlbumsAction | UpdatePageAction;

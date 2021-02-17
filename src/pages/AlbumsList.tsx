@@ -2,13 +2,18 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { RootState } from '../store/reducers';
-import { AlbumsState } from '../store/reducers/albumsReducer';
-import { fetchAlbums } from '../store/action-creators';
+import { Album } from '../entities';
+//import { AlbumsState } from '../store/reducers/albumsReducer';
+import { FiltersState } from '../store/reducers/filtersReducer';
+import { fetchAlbums } from '../store/action-creators/albumsActions';
 import CardComponent from '../components/CardComponent';
+import PaginationComponent from '../components/PaginationComponent';
+import { getVisibleAlbums }from '../filterSelectors/paginationFilters';
 
 
 interface Props {
-  albums: AlbumsState
+  albums: Album[];
+  filters: FiltersState
 }
 
 interface DispatchProps {
@@ -23,15 +28,19 @@ class AlbumsList extends React.Component<AlbumListProps> {
   }
   
   renderAlbums = () => {
-      return this.props.albums.albums.map((album => {
-        return <CardComponent {...album} key={album.id} />
-      }));
-      
+    return this.props.albums.map(album => {
+      return <CardComponent {...album} key={album.id} />
+    });
+      /*const { maxResultsPerPage, page } = this.props.filters;
+      return this.props.albums.albums.splice(page, maxResultsPerPage)
+          .map(album => {
+                return <CardComponent {...album} key={album.id} />
+          });*/
   };
 
   
   render() {
-    const { albums } = this.props.albums;
+    const { albums } = this.props;
     if (albums) {
       if (albums.length > 0) {
         return (
@@ -40,20 +49,21 @@ class AlbumsList extends React.Component<AlbumListProps> {
             <ul className="albums-list row">
               {this.renderAlbums()}
             </ul>
+            <PaginationComponent />
           </div>
         );
        }
     }
 
    return <div>Loading...</div>;
-
   };
 }
 
 const mapStateToProps = (state: RootState ): Props => {
-  
+  console.log(state.albumsState.albums);
   return {
-    albums: state.albumsState
+    albums: getVisibleAlbums(state.albumsState.albums, state.filtersState.page, state.filtersState.maxResultsPerPage),
+    filters: state.filtersState
   }
 }
 
