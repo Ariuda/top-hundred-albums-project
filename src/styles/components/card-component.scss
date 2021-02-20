@@ -1,12 +1,22 @@
 .card-container {
     padding: 5px;
+    list-style: none;
     .card {
         background-color: $transparent-white;
         border: none;
         border-radius: 5px;
         height: 100%;
         padding: 15px;
-        .card-first-row {
+        .card-top-row {
+            padding: 8px 0px;
+            div {
+                color: $white;
+                &:last-of-type {
+                    text-align: right;
+                }
+            }
+        }
+        .card-second-row {
             display: flex;
             margin-bottom: 15px;
             min-height: 164px;
@@ -21,10 +31,11 @@
                     margin-left: 15px;
                 }
                 .album-title {
-                    font-size: $lg-size;
+                    font-size: $md-size;
                 }
                 .artist-name {
-                    font-size: $md-size;
+                    font-size: $sm-size;
+                    font-weight: 300;
                 }
             }
         }

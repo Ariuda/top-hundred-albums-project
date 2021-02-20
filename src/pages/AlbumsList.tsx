@@ -28,14 +28,9 @@ class AlbumsList extends React.Component<AlbumListProps> {
   }
   
   renderAlbums = () => {
-    return this.props.albums.map(album => {
+    return this.props.albums.map((album) => {
       return <CardComponent {...album} key={album.id} />
     });
-      /*const { maxResultsPerPage, page } = this.props.filters;
-      return this.props.albums.albums.splice(page, maxResultsPerPage)
-          .map(album => {
-                return <CardComponent {...album} key={album.id} />
-          });*/
   };
 
   
@@ -60,7 +55,7 @@ class AlbumsList extends React.Component<AlbumListProps> {
 }
 
 const mapStateToProps = (state: RootState ): Props => {
-  console.log(state.albumsState.albums);
+  //console.log(state.albumsState.albums);
   return {
     albums: getVisibleAlbums(state.albumsState.albums, state.filtersState.page, state.filtersState.maxResultsPerPage),
     filters: state.filtersState

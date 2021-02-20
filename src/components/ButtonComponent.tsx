@@ -2,12 +2,19 @@ import React from 'react';
 
 interface Props {
     text: string;
+    onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+    link?: string;
+    className?: string;
 }
 
-const ButtonComponent: React.FC<Props> = ({ text }) => {
-    return (
-        <button className="button">{text}</button>
-    )
+const ButtonComponent: React.FC<Props> = ({ text, onClick, link, className }) => {
+    if (link) {
+        return (
+            <a href={link}>{text}</a>
+        )
+    }
+    return <button className={`button ${className ? className : ''}`} onClick={onClick}>{text}</button>
+    
 };
 
 export default ButtonComponent;

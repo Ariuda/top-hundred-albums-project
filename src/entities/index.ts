@@ -3,9 +3,13 @@ export interface Album {
     title: string, 
     artist: { 
         name: string, 
-        url: { 
-            href: string; 
-          }
+        link?: string,
     };
     image: string;
+    price: string;
+    category: {
+        name: string;
+        link: string;
+    }
+    index: number;
 }

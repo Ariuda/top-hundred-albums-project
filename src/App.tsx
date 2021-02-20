@@ -1,6 +1,6 @@
+import Root from './Root';
+
 import React from 'react';
-import { Provider } from 'react-redux';
-import { store } from './store';
 import { Router, Switch, Route } from 'react-router-dom';
 
 import history from './history';
@@ -8,7 +8,7 @@ import AlbumsList from './pages/AlbumsList';
 
 const App: React.FC = () => {
   return (
-    <Provider store={store}>
+    <Root>
       <div className="container">
         <Router history={history}>
           <Switch>
@@ -16,7 +16,7 @@ const App: React.FC = () => {
           </Switch>
         </Router>
       </div>
-    </Provider>
+    </Root>
   )
 };
 
