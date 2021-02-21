@@ -3,20 +3,21 @@ import React from 'react';
 import { Album } from '../entities';
 import ButtonComponent from './ButtonComponent';
 import { limitCharacters } from '../helpers/helpers';
+import { Link } from 'react-router-dom';
 
 
-const CardComponent: React.FC<Album> = ({ image, title, artist, price, category, index }) => {
+const CardComponent: React.FC<Album> = ({ image, title, artist, category, index, id, link }) => {
     const formattedTitle = limitCharacters(title);
     const formattedArtistName = limitCharacters(artist.name);
 
     const renderArtistName = () => {
         if (artist.link) {
-            return <p className="artist-name">By <a href={artist.link} target="_blank" rel="noreferrer">{formattedArtistName}</a></p>
+            return <a href={artist.link} target="_blank" rel="noreferrer" className="artist-name">{formattedArtistName}</a>
         }
-        return <p className="artist-name">By {formattedArtistName}</p>;
+        return <p className="artist-name">{formattedArtistName}</p>;
     };
     return (
-        <li className="card-container col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        <li className="card-container col-xl-4 col-lg-6 col-md-12">
             <div className="card">
                 <div className="card-top-row row">
                     <div className="col-6">
@@ -31,11 +32,11 @@ const CardComponent: React.FC<Album> = ({ image, title, artist, price, category,
                     <div className="card-text">
                         <p className="album-title">{formattedTitle}</p>
                         {renderArtistName()}
-                        <p className="price">{price}</p>
                     </div>
                 </div>
                 <div className="card-thrid-row">
-                    <ButtonComponent text="Play in AppleMusic" />
+                    <Link to={`/album/${id}`} className="dark-button">See more</Link>
+                    <ButtonComponent text="Go to Apple Music" link={link} />
                 </div>
             </div>
         </li>

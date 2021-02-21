@@ -1,0 +1,11 @@
+nav {
+    padding: 20px;
+    div {
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        @media (min-width: $md-breakpoint) {
+            width: 50%;
+        }
+    }
+}

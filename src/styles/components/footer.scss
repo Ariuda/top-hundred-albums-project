@@ -1,0 +1,14 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid $transparent-white;
+    div {
+        padding: 20px;
+        color: $white;
+        p {
+            font-size: $xsm-size;
+        }
+    }
+}

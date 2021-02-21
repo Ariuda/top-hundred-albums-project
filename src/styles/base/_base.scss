@@ -1,3 +1,15 @@
 body {
     background-color: $dark-grey;
 }
+
+#root {
+    min-height: 100vh;
+    position: relative;
+}
+
+.container {
+    padding-bottom: 230px;
+    @media (min-width: $sm-breakpoint) {
+        padding-bottom: 120px;
+    }
+}

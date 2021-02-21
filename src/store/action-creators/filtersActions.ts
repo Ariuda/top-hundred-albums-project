@@ -7,3 +7,10 @@ export const updateCurrentPage = (goTo: number): Action => {
         payload: goTo 
     } ;
 };
+
+export const updateFilters = (term: string): Action => {
+    return {
+        type: ActionTypes.FILTER_ALBUMS,
+        payload: term
+    }
+}

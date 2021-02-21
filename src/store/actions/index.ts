@@ -6,10 +6,20 @@ interface FetchAlbumsAction {
     payload: any
 }
 
+interface FetchAPIAuthorDetails {
+    type: ActionTypes.FETCH_API_AUTHOR_DETAILS,
+    payload: any
+}
+
 interface UpdatePageAction {
     type: ActionTypes.UPDATE_PAGE,
     payload: number;
 }
 
+interface UpdateFiltersAction {
+    type: ActionTypes.FILTER_ALBUMS,
+    payload: string;
+}
 
-export type Action = FetchAlbumsAction | UpdatePageAction;
+
+export type Action = FetchAlbumsAction | UpdatePageAction | UpdateFiltersAction;

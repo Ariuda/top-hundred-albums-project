@@ -42,13 +42,13 @@ const PaginationComponent: React.FC<PaginationProps> = ({ filters, updateCurrent
     
     return (
         <div className="pagination-component row">
-            <div className="col-3">
+            <div className="col-md-3 col-4">
                 {prevPage()}
             </div>
-            <div className="col-6 page">
+            <div className="col-md-6 col-4 page">
                 Page {page + 1}
             </div>
-            <div className="col-3">
+            <div className="col-md-3 col-4">
                 {nextPage()}
             </div>
         </div>

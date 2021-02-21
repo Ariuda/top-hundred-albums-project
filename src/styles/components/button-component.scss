@@ -2,7 +2,14 @@
     background: $purple-blue-gradient;
     color: $white;
     border-radius: 50px;
-    padding: 11px 32px;
+    padding: 10px 20px;
     border: 2px solid $white;
     outline: 0!important;
+    &:hover {
+        text-decoration: none;
+        color: $white;
+    }
+    @media (min-width: $lg-breakpoint) {
+        padding: 11px 32px;
+    }
 }

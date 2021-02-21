@@ -2,6 +2,7 @@
 
 $dark-grey: #171717;
 $purple-blue-gradient: linear-gradient(135deg, #8000FF, #1829AD);
+$soft-blue: #2063c7;
 $white: #ffffff;
 $transparent-white: #ffffff10;
 
@@ -12,3 +13,9 @@ $sm-size: 18px;
 $md-size: 22px;
 $lg-size: 24px;
 $xlg-size: 32px;
+
+// breakpoints
+
+$lg-breakpoint: 1200px;
+$md-breakpoint: 992px;
+$sm-breakpoint: 768px;

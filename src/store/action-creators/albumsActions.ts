@@ -10,7 +10,7 @@ export const fetchAlbums = () => {
             dispatch({
                 type: ActionTypes.FETCH_ALBUMS,
                 payload: data
-            })
+            });
         } catch(err) {
             console.error(err.message);
         }

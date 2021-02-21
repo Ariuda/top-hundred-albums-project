@@ -1,5 +1,6 @@
 export interface Album {
     id: string;
+    link: string;
     title: string, 
     artist: { 
         name: string, 
@@ -10,6 +11,9 @@ export interface Album {
     category: {
         name: string;
         link: string;
-    }
+    };
+    numberOfItems: string;
+    releaseDate: string;
+    rights: string;
     index: number;
-}
+};

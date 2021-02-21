@@ -1,0 +1,17 @@
+.not-found {
+    padding: 60px 0px 30px 0px;
+    color: $white;
+    text-align: center;
+    h1 {
+        margin-bottom: 50px;
+        font-size: $xlg-size;
+    }
+    .not-found-card {
+        background-color: $transparent-white;
+        padding: 40px;
+        border-radius: 5px;
+        a {
+            @include animatedUnderline($soft-blue);
+        }
+    }
+}

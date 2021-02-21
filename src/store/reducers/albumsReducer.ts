@@ -18,6 +18,7 @@ const reducer: Reducer<AlbumsState, Action> = (state: AlbumsState = initialState
             const results = action.payload.feed.entry.map((entry: any, i: number): Album => {
                 return {
                     id: entry.id.attributes['im:id'],
+                    link: entry.id.label,
                     title: entry['im:name'].label,
                     artist: {
                         name: entry['im:artist'].label,
@@ -29,6 +30,9 @@ const reducer: Reducer<AlbumsState, Action> = (state: AlbumsState = initialState
                         name: entry.category.attributes.label,
                         link: entry.category.attributes.scheme
                     },
+                    numberOfItems: entry['im:itemCount'].label,
+                    releaseDate: entry['im:releaseDate'].attributes.label,
+                    rights: entry.rights.label,
                     index: i + 1
                 }
             });

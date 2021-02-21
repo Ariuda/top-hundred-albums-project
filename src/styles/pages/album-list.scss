@@ -3,7 +3,12 @@
         color: $white;
         font-size: $xlg-size;
         text-align: center;
-        margin: 60px 0px;
+        margin: 60px auto;
+        width: 100%;
+        line-height: 1.4;
+        @media (min-width: $md-breakpoint) {
+            width: 35%;
+        }
     }
     .albums-list {
         padding: 0px;

@@ -1,0 +1,23 @@
+.albums-detail {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: $transparent-white;
+    margin-top: 60px;
+    align-items: center;
+    @media (min-width: $md-breakpoint) {
+        flex-direction: row;
+    }
+    img {
+        width: 170px;
+        height: 170px;
+        margin-bottom: 20px;
+    }
+    .text-container {
+        border-radius: 5px;
+        color: $white;
+        @media (min-width: $md-breakpoint) {
+            margin-left: 30px;
+        }
+    }
+}

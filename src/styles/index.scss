@@ -1,8 +1,16 @@
 @import './base/_settings.scss';
 @import './base/base.scss';
 
+@import './mixins/animation-mixins.scss';
+
 @import './pages/album-list.scss';
+@import './pages/albums-detail.scss';
+@import './pages/not-found.scss';
 
 @import './components/card-component.scss';
 @import './components/button-component.scss';
 @import './components/pagination-component.scss';
+@import './components/nav.scss';
+@import './components/text-input-component.scss';
+@import './components/search-results-component.scss';
+@import './components/footer.scss';
