@@ -12,4 +12,29 @@
     @media (min-width: $lg-breakpoint) {
         padding: 11px 32px;
     }
+    &.back-to-top {
+        position: sticky;
+        position: -webkit-sticky;
+        bottom: 3%;
+        left: 90%;
+        background: $dark-grey;
+        border: 2px solid $transparent-white;
+        height: 95px;
+        width: 95px;
+        cursor: pointer;
+        transition: all .5s ease;
+        opacity: 0;
+        &.active {
+            opacity: 1;
+            display: block;
+            z-index: 1;
+        }
+        &:before {
+            content: "\2191";
+            font-size: $xlg-size;
+        }
+        @media (min-width: $md-breakpoint) {
+            bottom: 20%;
+        }
+    }
 }

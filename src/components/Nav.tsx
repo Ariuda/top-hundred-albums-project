@@ -9,9 +9,15 @@ import SearchResultsComponent from './SearchResultsComponent';
 
 interface Props {
     albums: Album[];
-  }
+}
 
-class Nav extends React.Component<Props> {
+interface State {
+    term: string;
+    filteredResults: Album[];
+    wrapperRef: React.RefObject<HTMLDivElement>;
+}
+
+class Nav extends React.Component<Props, State> {
     state = { 
         term: '',
         filteredResults: [],
@@ -38,17 +44,6 @@ class Nav extends React.Component<Props> {
     onTermChange = (e: any) => {
         const term = e.target.value;
         this.setState({ term });
-
-        /*const debounce = () => {
-            if (this.state.timeoutId !== 0) clearTimeout(this.state.timeoutId);
-            
-            this.setState({ timeoutId : setTimeout(() => {
-                
-                }, 1000)
-            });
-        };*/
-
-        //debounce();
     }
 
     render() {

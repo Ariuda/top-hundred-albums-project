@@ -11,6 +11,11 @@ interface FetchAPIAuthorDetails {
     payload: any
 }
 
+interface UpdateFavorite {
+    type: ActionTypes.UPDATE_FAVORITE,
+    payload: string
+}
+
 interface UpdatePageAction {
     type: ActionTypes.UPDATE_PAGE,
     payload: number;
@@ -22,4 +27,4 @@ interface UpdateFiltersAction {
 }
 
 
-export type Action = FetchAlbumsAction | UpdatePageAction | UpdateFiltersAction;
+export type Action = FetchAlbumsAction | UpdatePageAction | UpdateFavorite | UpdateFiltersAction | FetchAPIAuthorDetails;

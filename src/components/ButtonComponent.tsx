@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface Props {
-    text: string;
+    text?: string;
     onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
     link?: string;
     className?: string;

@@ -1,14 +1,22 @@
 import { Action } from '../actions';
 import { ActionTypes } from '../action-types';
-import { Album } from '../../entities';
+import { Album, APIAuthor } from '../../entities';
 import { Reducer } from 'redux';
 
 export type AlbumsState = {
     albums: Album[];
+    APIAuthor: APIAuthor;
 };
 
 const initialState = {
-    albums: []
+    albums: [],
+    APIAuthor: {
+        name: '',
+        link: '',
+        rights: '', 
+        title: '', 
+        lastUpdated: '' 
+    }
 };
 
 const reducer: Reducer<AlbumsState, Action> = (state: AlbumsState = initialState, action: Action) => {
@@ -33,10 +41,30 @@ const reducer: Reducer<AlbumsState, Action> = (state: AlbumsState = initialState
                     numberOfItems: entry['im:itemCount'].label,
                     releaseDate: entry['im:releaseDate'].attributes.label,
                     rights: entry.rights.label,
-                    index: i + 1
+                    index: i + 1,
+                    favorite: false
                 }
             });
             return { ...state, albums: results };
+            case ActionTypes.FETCH_API_AUTHOR_DETAILS:
+                const { feed } = action.payload;
+                const result = {
+                    name: feed.author.name.label,
+                    link: feed.author.uri.label,
+                    rights: feed.rights.label,
+                    title: feed.title.label,
+                    lastUpdated: feed.updated.label
+                };
+            return { ...state, APIAuthor: result };
+            case ActionTypes.UPDATE_FAVORITE:
+                const updatedAlbums = state.albums.map(album => {
+                    if (album.id === action.payload) {
+                        const favorite = !album.favorite;
+                        return { ...album, favorite};
+                    }
+                    return {...album};
+                });
+                return { ...state, albums: updatedAlbums };
         default:
             return state;
     }

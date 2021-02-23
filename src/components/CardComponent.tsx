@@ -1,12 +1,19 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
+import { updateFavorite } from '../store/action-creators/albumsActions';
 import { Album } from '../entities';
 import ButtonComponent from './ButtonComponent';
 import { limitCharacters } from '../helpers/helpers';
 import { Link } from 'react-router-dom';
 
+interface Props {
+    updateFavorite: (id: string) => void;
+}
 
-const CardComponent: React.FC<Album> = ({ image, title, artist, category, index, id, link }) => {
+type CardComponentProps = Album & Props;
+
+const CardComponent: React.FC<CardComponentProps> = ({ image, title, artist, category, index, id, link, favorite, updateFavorite }) => {
     const formattedTitle = limitCharacters(title);
     const formattedArtistName = limitCharacters(artist.name);
 
@@ -16,6 +23,14 @@ const CardComponent: React.FC<Album> = ({ image, title, artist, category, index,
         }
         return <p className="artist-name">{formattedArtistName}</p>;
     };
+
+    const renderFavoriteIcon = () => {
+        if(favorite) {
+            return <i className="small material-icons">favorite</i>;
+        }
+        return <i className="small material-icons">favorite_border</i>;
+    };
+
     return (
         <li className="card-container col-xl-4 col-lg-6 col-md-12">
             <div className="card">
@@ -25,6 +40,9 @@ const CardComponent: React.FC<Album> = ({ image, title, artist, category, index,
                     </div>
                     <div className="col-6">
                         Top #{index}
+                        <div className="favorite-icon" onClick={(e) => updateFavorite(id)}>
+                            {renderFavoriteIcon()}
+                        </div>
                     </div>
                 </div>
                 <div className="card-second-row">
@@ -43,4 +61,4 @@ const CardComponent: React.FC<Album> = ({ image, title, artist, category, index,
     )
 };
 
-export default CardComponent;
+export default connect(null, { updateFavorite })(CardComponent);

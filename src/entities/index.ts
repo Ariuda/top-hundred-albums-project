@@ -16,4 +16,13 @@ export interface Album {
     releaseDate: string;
     rights: string;
     index: number;
+    favorite: boolean;
 };
+
+export interface APIAuthor {
+    name: string; 
+    link: string; 
+    rights: string; 
+    title: string; 
+    lastUpdated: string; 
+}

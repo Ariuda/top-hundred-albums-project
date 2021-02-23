@@ -11,8 +11,19 @@ export const fetchAlbums = () => {
                 type: ActionTypes.FETCH_ALBUMS,
                 payload: data
             });
+            dispatch({
+                type: ActionTypes.FETCH_API_AUTHOR_DETAILS,
+                payload: data
+            });
         } catch(err) {
-            console.error(err.message);
+            throw new Error('Ooops! We could not get any results, please try again later.');
         }
+    }
+}
+
+export const updateFavorite = (id: string): Action => {
+    return {
+        type: ActionTypes.UPDATE_FAVORITE,
+        payload: id
     }
 }

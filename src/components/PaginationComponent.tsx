@@ -32,13 +32,13 @@ const PaginationComponent: React.FC<PaginationProps> = ({ filters, updateCurrent
         return (
             <ButtonComponent onClick={(e) => changePage(- 1)} text="Prev" className="pagination-prev" />
         )
-    }
+    };
 
     const nextPage = () => {
         if (page === numOfPages - 1) return;
 
         return <ButtonComponent onClick={(e) => changePage(1)} text="Next" className="pagination-next" />;
-    }
+    };
     
     return (
         <div className="pagination-component row">

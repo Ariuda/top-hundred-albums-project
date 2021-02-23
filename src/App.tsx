@@ -13,7 +13,7 @@ import Footer from './components/Footer';
 const App: React.FC = () => {
   return (
     <Root>
-      <div className="container">
+      <div className="container app-container">
         <Router history={history}>
           <Nav />
           <Switch>
