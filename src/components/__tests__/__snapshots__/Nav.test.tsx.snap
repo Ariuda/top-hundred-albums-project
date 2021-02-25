@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should not render the nav when it does not get data from the api 1`] = `""`;
+
+exports[`should render the nav when it gets data from the api 1`] = `
+<nav>
+  <div>
+    <TextInputComponent
+      onChange={[Function]}
+      placeholder="Type a name of an artist, album or category"
+      value=""
+    />
+  </div>
+</nav>
+`;

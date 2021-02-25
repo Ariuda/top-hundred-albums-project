@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should not render the search results if there are no results 1`] = `
+<ul>
+  <li
+    className="no-result"
+  >
+    Your search did not match any results
+  </li>
+</ul>
+`;
+
+exports[`should render the search results if there are any results 1`] = `
+<ul>
+  <li
+    key="123"
+    onClick={[Function]}
+  >
+    <Link
+      to="/album/123"
+    >
+      title 1
+      , by 
+      name 1
+       - 
+      category
+    </Link>
+  </li>
+  <li
+    key="124"
+    onClick={[Function]}
+  >
+    <Link
+      to="/album/124"
+    >
+      title 2
+      , by 
+      name 2
+       - 
+      category
+    </Link>
+  </li>
+</ul>
+`;

@@ -13,7 +13,7 @@ interface Props {
 
 type CardComponentProps = Album & Props;
 
-const CardComponent: React.FC<CardComponentProps> = ({ image, title, artist, category, index, id, link, favorite, updateFavorite }) => {
+export const CardComponent: React.FC<CardComponentProps> = ({ image, title, artist, category, index, id, link, favorite, updateFavorite }) => {
     const formattedTitle = limitCharacters(title);
     const formattedArtistName = limitCharacters(artist.name);
 

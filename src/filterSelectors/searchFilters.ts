@@ -1,4 +1,3 @@
-import { format } from 'path';
 import { Album } from '../entities';
 
 export const filterBySearch = (term: string, arr: Album[]) => {

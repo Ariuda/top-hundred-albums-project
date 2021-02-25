@@ -22,7 +22,7 @@ const initialState = {
 const reducer: Reducer<AlbumsState, Action> = (state: AlbumsState = initialState, action: Action) => {
     switch(action.type) {
         case ActionTypes.FETCH_ALBUMS: 
-            console.log(action.payload);
+            //console.log(action.payload);
             const results = action.payload.feed.entry.map((entry: any, i: number): Album => {
                 return {
                     id: entry.id.attributes['im:id'],

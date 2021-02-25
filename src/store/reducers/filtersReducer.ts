@@ -20,7 +20,6 @@ const reducer: Reducer<FiltersState, Action> = (state: FiltersState = initialSta
             let nextPage = state.page + action.payload;
             return { ...state, page: nextPage };
         case ActionTypes.FILTER_ALBUMS:
-            console.log(action.payload);
             return { ...state, filter: action.payload };
         default:
             return state;

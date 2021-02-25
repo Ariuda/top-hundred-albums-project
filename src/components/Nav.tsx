@@ -17,7 +17,7 @@ interface State {
     wrapperRef: React.RefObject<HTMLDivElement>;
 }
 
-class Nav extends React.Component<Props, State> {
+export class Nav extends React.Component<Props, State> {
     state = { 
         term: '',
         filteredResults: [],

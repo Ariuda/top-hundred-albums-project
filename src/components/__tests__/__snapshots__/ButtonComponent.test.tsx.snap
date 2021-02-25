@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the button as a button when no link is passed 1`] = `
+<button
+  className="button "
+  onClick={[Function]}
+>
+  test
+</button>
+`;
+
+exports[`should render the button as a button with an additional class when there is no link and a classname are passed 1`] = `
+<button
+  className="button test-class"
+  onClick={[Function]}
+>
+  test
+</button>
+`;
+
+exports[`should render the button as a link when a link is passed 1`] = `
+<a
+  className="button "
+  href="test-link"
+  rel="noreferrer"
+  target="_blank"
+>
+  test
+</a>
+`;
+
+exports[`should render the button as a link with an additional class when a link and a classname are passed 1`] = `
+<a
+  className="button test-class"
+  href="test-link"
+  rel="noreferrer"
+  target="_blank"
+>
+  test
+</a>
+`;

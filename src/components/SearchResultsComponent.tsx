@@ -7,7 +7,7 @@ interface Props {
     onClick: () => void;
 }
 
-const SearchResultsComponent: React.FC<Props> = ({ results, onClick }) => {
+export const SearchResultsComponent: React.FC<Props> = ({ results, onClick }) => {
 
     const renderResults = () => {
         if (results.length > 0) {

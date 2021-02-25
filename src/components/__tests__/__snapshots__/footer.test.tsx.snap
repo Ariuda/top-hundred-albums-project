@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should not render the footer if it does not get all the data from the api 1`] = `""`;
+
+exports[`should render the footer when it gets all the data from the api 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="container"
+  >
+    <p>
+      Powered by 
+      title
+      , 
+      rights
+    </p>
+    <p>
+      Last updated on 
+      Invalid Date
+    </p>
+    <p>
+      You can visit the 
+      name
+       by 
+      <a
+        href="link"
+        target="_blank"
+      >
+        clicking here
+      </a>
+    </p>
+  </div>
+</footer>
+`;

@@ -6,10 +6,10 @@ interface Props {
     onChange: (e: any) => void;
 }
 
-const TextInputComponent: React.FC<Props> = ({ value, placeholder, onChange }) => {
+export const TextInputComponent: React.FC<Props> = ({ value, placeholder, onChange }) => {
 
     return (
-        <input type="text" value={value} placeholder={placeholder} onChange={onChange} />
+        <input type="text" className="search-input" value={value} placeholder={placeholder} onChange={onChange} />
     )
 };
 

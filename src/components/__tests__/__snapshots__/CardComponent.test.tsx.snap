@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the button as a link when a link is passed 1`] = `
+<li
+  className="card-container col-xl-4 col-lg-6 col-md-12"
+>
+  <div
+    className="card"
+  >
+    <div
+      className="card-top-row row"
+    >
+      <div
+        className="col-6"
+      >
+        <a
+          href="test-category-link"
+          rel="noreferrer"
+          target="_blank"
+        >
+          test-category
+        </a>
+      </div>
+      <div
+        className="col-6"
+      >
+        Top #
+        0
+        <div
+          className="favorite-icon"
+          onClick={[Function]}
+        >
+          <i
+            className="small material-icons"
+          >
+            favorite_border
+          </i>
+        </div>
+      </div>
+    </div>
+    <div
+      className="card-second-row"
+    >
+      <img
+        alt="test-title"
+        src="test-image"
+      />
+      <div
+        className="card-text"
+      >
+        <p
+          className="album-title"
+        >
+          test-title
+        </p>
+        <a
+          className="artist-name"
+          href="test-artist-link"
+          rel="noreferrer"
+          target="_blank"
+        >
+          test-artist
+        </a>
+      </div>
+    </div>
+    <div
+      className="card-thrid-row"
+    >
+      <Link
+        className="dark-button"
+        to="/album/99999"
+      >
+        See more
+      </Link>
+      <ButtonComponent
+        link="test-link"
+        text="Go to Apple Music"
+      />
+    </div>
+  </div>
+</li>
+`;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, RouteComponentProps } from 'react-router-dom';
 
-class NotFound extends React.Component<RouteComponentProps> {
+export class NotFound extends React.Component<RouteComponentProps> {
     state = {
         timeoutId: 0
     }

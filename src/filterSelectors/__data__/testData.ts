@@ -1,6 +1,7 @@
 export const testData = [
     {
         id: '123',
+        link: 'link',
         title: 'title 1',
         artist: {
             name: 'name 1',
@@ -11,10 +12,16 @@ export const testData = [
         category: {
             name: 'category',
             link: 'category-link'
-        }  
+        },
+        numberOfItems: '8',
+        releaseDate: 'release-date',
+        rights: 'rights-data',
+        index: 1,
+        favorite: false  
     },
     {
         id: '124',
+        link: 'link',
         title: 'title 2',
         artist: {
             name: 'name 2',
@@ -25,10 +32,16 @@ export const testData = [
         category: {
             name: 'category',
             link: 'category-link'
-        }  
+        },
+        numberOfItems: '8',
+        releaseDate: 'release-date',
+        rights: 'rights-data',
+        index: 2,
+        favorite: false   
     },
     {
         id: '125',
+        link: 'link',
         title: 'title 3',
         artist: {
             name: 'name 3',
@@ -39,10 +52,16 @@ export const testData = [
         category: {
             name: 'category',
             link: 'category-link'
-        }  
+        },
+        numberOfItems: '8',
+        releaseDate: 'release-date',
+        rights: 'rights-data',
+        index: 3,
+        favorite: false   
     },
     {
         id: '126',
+        link: 'link',
         title: 'title 4',
         artist: {
             name: 'name 4',
@@ -53,10 +72,16 @@ export const testData = [
         category: {
             name: 'category',
             link: 'category-link'
-        }  
+        },
+        numberOfItems: '8',
+        releaseDate: 'release-date',
+        rights: 'rights-data',
+        index: 4,
+        favorite: false   
     },
     {
         id: '126',
+        link: 'link',
         title: 'title 5',
         artist: {
             name: 'name 5',
@@ -67,10 +92,16 @@ export const testData = [
         category: {
             name: 'category',
             link: 'category-link'
-        }  
+        },
+        numberOfItems: '8',
+        releaseDate: 'release-date',
+        rights: 'rights-data',
+        index: 5,
+        favorite: false   
     },
     {
         id: '127',
+        link: 'link',
         title: 'title 6',
         artist: {
             name: 'name 6',
@@ -81,10 +112,16 @@ export const testData = [
         category: {
             name: 'category',
             link: 'category-link'
-        }  
+        },
+        numberOfItems: '8',
+        releaseDate: 'release-date',
+        rights: 'rights-data',
+        index: 6,
+        favorite: false   
     },
     {
         id: '128',
+        link: 'link',
         title: 'title 7',
         artist: {
             name: 'name 7',
@@ -95,10 +132,16 @@ export const testData = [
         category: {
             name: 'category',
             link: 'category-link'
-        }  
+        },
+        numberOfItems: '8',
+        releaseDate: 'release-date',
+        rights: 'rights-data',
+        index: 7,
+        favorite: false   
     },
     {
         id: '129',
+        link: 'link',
         title: 'title 8',
         artist: {
             name: 'name 8',
@@ -109,10 +152,16 @@ export const testData = [
         category: {
             name: 'category',
             link: 'category-link'
-        }  
+        },
+        numberOfItems: '8',
+        releaseDate: 'release-date',
+        rights: 'rights-data',
+        index: 8,
+        favorite: false   
     },
     {
         id: '130',
+        link: 'link',
         title: 'title 9',
         artist: {
             name: 'name 9',
@@ -123,10 +172,16 @@ export const testData = [
         category: {
             name: 'category',
             link: 'category-link'
-        }  
+        },
+        numberOfItems: '8',
+        releaseDate: 'release-date',
+        rights: 'rights-data',
+        index: 9,
+        favorite: false   
     },
     {
         id: '131',
+        link: 'link',
         title: 'title 10',
         artist: {
             name: 'name 10',
@@ -137,10 +192,16 @@ export const testData = [
         category: {
             name: 'category',
             link: 'category-link'
-        }  
+        },
+        numberOfItems: '8',
+        releaseDate: 'release-date',
+        rights: 'rights-data',
+        index: 10,
+        favorite: false   
     },
     {
         id: '132',
+        link: 'link',
         title: 'title 11',
         artist: {
             name: 'name 11',
@@ -151,10 +212,16 @@ export const testData = [
         category: {
             name: 'category',
             link: 'category-link'
-        }  
+        },
+        numberOfItems: '8',
+        releaseDate: 'release-date',
+        rights: 'rights-data',
+        index: 11,
+        favorite: false   
     },
     {
         id: '133',
+        link: 'link',
         title: 'title 12',
         artist: {
             name: 'name 12',
@@ -165,10 +232,16 @@ export const testData = [
         category: {
             name: 'category',
             link: 'category-link'
-        }  
+        },
+        numberOfItems: '8',
+        releaseDate: 'release-date',
+        rights: 'rights-data',
+        index: 12,
+        favorite: false   
     },
     {
         id: '134',
+        link: 'link',
         title: 'title 13',
         artist: {
             name: 'name 13',
@@ -179,11 +252,17 @@ export const testData = [
         category: {
             name: 'category',
             link: 'category-link'
-        }  
+        },
+        numberOfItems: '8',
+        releaseDate: 'release-date',
+        rights: 'rights-data',
+        index: 13,
+        favorite: false   
     },
     {
         id: '135',
-        title: 'title 14',
+        link: 'link',
+        title: 'album 14',
         artist: {
             name: 'name 14',
             link: 'link',
@@ -193,11 +272,17 @@ export const testData = [
         category: {
             name: 'category',
             link: 'category-link'
-        }  
+        },
+        numberOfItems: '8',
+        releaseDate: 'release-date',
+        rights: 'rights-data',
+        index: 14,
+        favorite: false   
     },
     {
         id: '136',
-        title: 'title 15',
+        link: 'link',
+        title: 'different title 15',
         artist: {
             name: 'name 15',
             link: 'link',
@@ -207,6 +292,11 @@ export const testData = [
         category: {
             name: 'category',
             link: 'category-link'
-        }  
+        },
+        numberOfItems: '8',
+        releaseDate: 'release-date',
+        rights: 'rights-data',
+        index: 15,
+        favorite: false   
     }
 ];

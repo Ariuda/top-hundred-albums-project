@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LoadingComponent: React.FC = () => {
+export const LoadingComponent: React.FC = () => {
     return (
         <div className="loading">
             <h1>Top 100 albums in the iTunes Store</h1>

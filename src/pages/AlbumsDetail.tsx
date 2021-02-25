@@ -14,11 +14,11 @@ interface MatchParams {
     id: string;
 }
 
-type AlbumsDetailProps = Props & MatchParams & RouteComponentProps<MatchParams>;
+type AlbumsDetailProps = Props & RouteComponentProps<MatchParams>;
 
-const AlbumsDetail: React.FC<AlbumsDetailProps> = (props) => {
+export const AlbumsDetail: React.FC<AlbumsDetailProps> = (props) => {
     const album = props.selectedAlbum;
-    if (album) {
+    if (album) {        
         return (
             <div className="albums-detail-wrapper">   
                 <span className="go-back" onClick={() => props.history.goBack()}>Go Back</span>

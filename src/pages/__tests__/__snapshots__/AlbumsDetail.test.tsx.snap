@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the albums detail page correctly 1`] = `
+<div
+  className="albums-detail-wrapper"
+>
+  <span
+    className="go-back"
+    onClick={[Function]}
+  >
+    Go Back
+  </span>
+  <div
+    className="albums-detail"
+  >
+    <img
+      alt="title 1"
+      src="image-one"
+    />
+    <div
+      className="text-container"
+    >
+      <h1>
+        title 1
+      </h1>
+      <h2>
+        By 
+        name 1
+      </h2>
+      <p>
+        Number 
+        1
+         on iTunes
+      </p>
+      <p>
+        Released in 
+        release-date
+      </p>
+      <p>
+        8
+         songs
+      </p>
+      <p>
+        Price in iTunes: 
+        price-one
+      </p>
+      <p>
+        rights-data
+      </p>
+    </div>
+  </div>
+</div>
+`;

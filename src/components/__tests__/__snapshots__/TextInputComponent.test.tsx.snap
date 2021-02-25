@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the text input component correctly 1`] = `
+<input
+  className="search-input"
+  onChange={[Function]}
+  placeholder="test"
+  type="text"
+  value=""
+/>
+`;

@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the loading component 1`] = `
+<div
+  className="loading"
+>
+  <h1>
+    Top 100 albums in the iTunes Store
+  </h1>
+  <div
+    className="animation"
+  >
+    <div
+      className="bar bar-one"
+    />
+    <div
+      className="bar bar-two"
+    />
+    <div
+      className="bar bar-three"
+    />
+    <div
+      className="bar bar-four"
+    />
+    <div
+      className="bar bar-five"
+    />
+    <div
+      className="bar bar-six"
+    />
+    <div
+      className="bar bar-seven"
+    />
+    <div
+      className="bar bar-eight"
+    />
+    <div
+      className="bar bar-nine"
+    />
+    <div
+      className="bar bar-ten"
+    />
+  </div>
+  Loading...
+</div>
+`;

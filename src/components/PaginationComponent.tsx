@@ -18,7 +18,7 @@ interface DispatchProps {
 
 type PaginationProps = Props & DispatchProps;
 
-const PaginationComponent: React.FC<PaginationProps> = ({ filters, updateCurrentPage, albums }) => {
+export const PaginationComponent: React.FC<PaginationProps> = ({ filters, updateCurrentPage, albums }) => {
     const { page, maxResultsPerPage } = filters;
     const numOfPages = Math.ceil(albums.length / maxResultsPerPage);
 

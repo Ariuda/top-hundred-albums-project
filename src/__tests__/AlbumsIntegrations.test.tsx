@@ -20,6 +20,13 @@ describe('set of tests to test if the albumsList page is rendered as expected', 
                 <App />
             </Root>
         );
+
+        const mockIntersectionObserver = jest.fn();
+        mockIntersectionObserver.mockReturnValue({
+            observe: () => null,
+            unobserve: () => null
+        });
+        window.IntersectionObserver = mockIntersectionObserver;
     });
     
     afterEach(() => {
@@ -34,6 +41,19 @@ describe('set of tests to test if the albumsList page is rendered as expected', 
         await delayTest();
         wrapped.update();
         expect(wrapped.find('.card-container').length).toEqual(12);
+    });
+
+    it('has a searchbar', async () => {
+        await delayTest();
+        wrapped.update();
+        expect(wrapped.find('.search-input').length).toEqual(1);
+    });
+
+    it('has a button with the right link to go to the see more details page on the card component', async () => {
+        await delayTest();
+        wrapped.update();
+        const buttons = wrapped.find('.dark-button');
+        expect(buttons.get(0).props.to).toEqual('/album/999999');
     });
     
     it('initially shows only the next button and the page', async () => {
@@ -63,5 +83,11 @@ describe('set of tests to test if the albumsList page is rendered as expected', 
         expect(page.text()).toEqual('Page 3');
         expect(wrapped.find({ children: 'Next' }).length).toEqual(0);
         expect(wrapped.find({ children: 'Prev' }).length).toEqual(1);
+    });
+
+    it('has a footer', async () => {
+        await delayTest();
+        wrapped.update();
+        expect(wrapped.find('.footer').length).toEqual(1);
     });
 })

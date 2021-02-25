@@ -7,6 +7,7 @@ export const fetchAlbums = () => {
     return async (dispatch: Dispatch<Action>)  => {
         try {
             const { data } = await axios.get('https://itunes.apple.com/us/rss/topalbums/limit=100/json');
+            //console.log(data);
             dispatch({
                 type: ActionTypes.FETCH_ALBUMS,
                 payload: data
