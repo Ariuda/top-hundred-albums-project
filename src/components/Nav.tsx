@@ -13,14 +13,12 @@ interface Props {
 
 interface State {
     term: string;
-    filteredResults: Album[];
     wrapperRef: React.RefObject<HTMLDivElement>;
 }
 
 export class Nav extends React.Component<Props, State> {
     state = { 
         term: '',
-        filteredResults: [],
         wrapperRef: React.createRef<HTMLDivElement>()
     }
 
