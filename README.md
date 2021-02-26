@@ -13,6 +13,8 @@ This project has been created with:
 ## Setup
 To run the project, please run the following commands after downloading it:
 
+```
 npm install to install the dependencies
 npm start to run the project in localhost
 npm test to run the tests
+```
